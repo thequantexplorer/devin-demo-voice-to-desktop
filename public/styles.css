@@ -4,6 +4,22 @@ h1 { font-size: 28px; letter-spacing: -0.02em; }
 .banner { padding: 16px 20px; border-radius: 12px; background: #e9f8ef; color: #0a6b34; font-weight: 600; margin-bottom: 24px; }
 .banner.degraded { background: #fff6e5; color: #8a5a00; }
 ul { list-style: none; padding: 0; border: 1px solid #eee; border-radius: 12px; }
-li { display: flex; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid #f1f1f1; }
+li { padding: 14px 18px; border-bottom: 1px solid #f1f1f1; }
+.row { display: flex; justify-content: space-between; }
 li:last-child { border-bottom: 0; }
 .operational { color: #0a6b34; } .degraded { color: #8a5a00; } .outage { color: #b42318; }
+.uptime { margin-top: 10px; }
+.bars { display: flex; gap: 2px; height: 34px; }
+.day { flex: 1; min-width: 0; border-radius: 2px; background: #2da44e; cursor: pointer; }
+.day.degraded { background: #e3a008; } .day.outage { background: #d1242f; }
+.day:hover { opacity: 0.7; }
+.legend { display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; color: #6b7280; }
+.legend .pct { color: #374151; }
+.tooltip { position: absolute; z-index: 10; width: 260px; padding: 10px 12px; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); font-size: 13px; }
+.tooltip[hidden] { display: none; }
+.tooltip .tip-status { margin: 2px 0 6px; font-weight: 600; }
+.tooltip ul { border: 0; border-radius: 0; margin: 0; }
+.tooltip li { padding: 4px 0 4px 8px; border-bottom: 0; border-left: 3px solid transparent; color: #111; }
+.tooltip li.degraded { border-left-color: #e3a008; } .tooltip li.outage { border-left-color: #d1242f; } .tooltip li.none { padding-left: 0; color: #6b7280; }
+.tooltip small { color: #6b7280; }
+.tooltip .operational { color: #0a6b34; }
