@@ -1,6 +1,6 @@
 # Devin demo: Voice kickoff on iOS, finish in Desktop or CLI
 
-**What it shows:** Cloud-to-local continuity. Start a task by voice from the Devin iOS app, let it reach a draft PR, then continue the same session from Devin Desktop or the CLI to steer and merge.
+**What it shows:** Start a feature by voice in the Devin iOS app. Devin opens a draft PR, and you continue the same session in Devin Desktop or the CLI.
 
 **Needs:** GitHub, plus the Devin iOS app and Devin Desktop or the CLI
 
