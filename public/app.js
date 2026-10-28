@@ -36,12 +36,14 @@ function tooltipHtml(d) {
 
   const tip = document.getElementById('tooltip');
   const hide = () => (tip.hidden = true);
+  let shownAtY = 0;
   list.addEventListener('mouseover', (e) => {
     const bar = e.target.closest('.day');
     if (!bar) return;
     const day = byName[bar.closest('.uptime').dataset.name].days[bar.dataset.i];
     tip.innerHTML = tooltipHtml(day);
     tip.hidden = false;
+    shownAtY = window.scrollY;
     const r = bar.getBoundingClientRect();
     const w = tip.offsetWidth;
     const left = Math.min(Math.max(r.left + r.width / 2 - w / 2, 8), document.documentElement.clientWidth - w - 8);
@@ -51,5 +53,5 @@ function tooltipHtml(d) {
   list.addEventListener('mouseout', (e) => {
     if (e.target.closest('.day') && !e.relatedTarget?.closest?.('.day')) hide();
   });
-  window.addEventListener('scroll', hide, { passive: true });
+  window.addEventListener('scroll', () => window.scrollY !== shownAtY && hide(), { passive: true });
 })();
