@@ -1,0 +1,9 @@
+{
+  "name": "acme-status-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "status.acme.dev: live component status from health checks",
+  "scripts": { "start": "node server/index.js", "test": "node --test" },
+  "dependencies": { "express": "^4.21.2" },
+  "devDependencies": { "supertest": "^7.0.0" }
+}

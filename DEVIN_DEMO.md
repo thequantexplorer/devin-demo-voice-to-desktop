@@ -1,0 +1,24 @@
+# Devin demo: Voice kickoff on iOS, finish in Desktop or CLI
+
+**What it shows:** Cloud-to-local continuity. Start a task by voice from the Devin iOS app, let it reach a draft PR, then continue the same session from Devin Desktop or the CLI to steer and merge.
+
+**Needs:** GitHub, plus the Devin iOS app and Devin Desktop or the CLI
+
+More demos: [devin-advanced-demos](https://github.com/thequantexplorer/devin-advanced-demos)
+
+## Set it up
+
+1. Click **Use this template → Create a new repository** (or fork it) into your own GitHub account or org.
+2. In Devin, open **Settings → Integrations → GitHub** and make sure Devin can access the new repository.
+
+## Prompt
+
+Start a new Devin session and paste this. Replace `<you>` with your GitHub user or org.
+
+```text
+Hey Devin — on https://github.com/<you>/devin-demo-voice-to-desktop, add a 90-day uptime bar to each component on the status page, like the ones on GitHub's status page: green/amber/red per day computed from incident history, with a hover tooltip. Get it working and push a draft PR; I'll pick it up from my laptop to review and tweak.
+
+When the draft PR is up, stop and summarize where you left off and exactly what's left, so this can be continued from Devin Desktop/CLI with full context.
+```
+
+> Say the prompt into the Devin iOS app. When the draft PR is up, open the same session in Devin Desktop or the CLI to review, tweak and merge.
